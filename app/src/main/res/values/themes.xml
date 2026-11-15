@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        Tema base de la app. No usamos los colores por defecto de Material:
+        fondo crema, tinta negra y un color de acento distinto para cada rol.
+    -->
+    <style name="Theme.NeHood" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/nh_orange</item>
+        <item name="colorOnPrimary">@color/nh_white</item>
+        <item name="colorPrimaryContainer">@color/nh_orange_light</item>
+        <item name="colorOnPrimaryContainer">@color/nh_ink</item>
+        <item name="colorSecondary">@color/nh_ink</item>
+        <item name="colorOnSecondary">@color/nh_white</item>
+        <item name="colorSecondaryContainer">@color/nh_cream_dark</item>
+        <item name="colorOnSecondaryContainer">@color/nh_ink</item>
+        <item name="android:colorBackground">@color/nh_cream</item>
+        <item name="colorOnBackground">@color/nh_ink</item>
+        <item name="colorSurface">@color/nh_white</item>
+        <item name="colorOnSurface">@color/nh_ink</item>
+        <item name="colorOnSurfaceVariant">@color/nh_gray</item>
+        <item name="colorOutline">@color/nh_line</item>
+        <item name="colorError">@color/nh_red</item>
+
+        <item name="android:statusBarColor">@color/nh_ink</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@color/nh_white</item>
+        <item name="android:windowBackground">@color/nh_cream</item>
+
+        <!-- Estilos por defecto de los componentes -->
+        <item name="materialButtonStyle">@style/Widget.NeHood.Button</item>
+        <item name="materialButtonOutlinedStyle">@style/Widget.NeHood.Button.Outlined</item>
+        <item name="textInputStyle">@style/Widget.NeHood.TextInput</item>
+        <item name="materialCardViewStyle">@style/Widget.NeHood.Card</item>
+        <item name="chipStyle">@style/Widget.NeHood.Chip</item>
+        <item name="bottomNavigationStyle">@style/Widget.NeHood.BottomNav</item>
+        <item name="toolbarStyle">@style/Widget.NeHood.Toolbar</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.NeHood.Dialog</item>
+    </style>
+
+    <!-- Un tema por rol: solo cambia el color de acento -->
+    <style name="Theme.NeHood.Buyer" />
+
+    <style name="Theme.NeHood.Seller">
+        <item name="colorPrimary">@color/nh_blue</item>
+        <item name="colorPrimaryContainer">@color/nh_blue_light</item>
+    </style>
+
+    <style name="Theme.NeHood.Admin">
+        <item name="colorPrimary">@color/nh_purple</item>
+        <item name="colorPrimaryContainer">@color/nh_purple_light</item>
+    </style>
+
+    <!-- Login y recuperación: barra de estado crema con íconos oscuros -->
+    <style name="Theme.NeHood.Auth">
+        <item name="android:statusBarColor">@color/nh_cream</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/nh_cream</item>
+    </style>
+
+    <style name="Theme.NeHood.Splash" parent="Theme.NeHood.Auth">
+        <item name="android:windowBackground">@drawable/bg_splash</item>
+    </style>
+
+    <!-- Diálogos con esquinas redondeadas y botones en el color del rol -->
+    <style name="ThemeOverlay.NeHood.Dialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.NeHood.Dialog</item>
+        <item name="android:background">@color/nh_white</item>
+    </style>
+
+    <style name="ShapeAppearance.NeHood.Dialog" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/radius_l</item>
+    </style>
+</resources>

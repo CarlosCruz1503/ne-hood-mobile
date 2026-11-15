@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ===== Tipografía ===== -->
+    <style name="TextAppearance.NeHood.Display" parent="TextAppearance.Material3.DisplaySmall">
+        <item name="android:fontFamily">@font/anton</item>
+        <item name="fontFamily">@font/anton</item>
+        <item name="android:textSize">@dimen/text_display</item>
+        <item name="android:textColor">@color/nh_ink</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <style name="TextAppearance.NeHood.Headline" parent="TextAppearance.NeHood.Display">
+        <item name="android:textSize">@dimen/text_headline</item>
+    </style>
+
+    <style name="TextAppearance.NeHood.Title" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textSize">@dimen/text_title</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/nh_ink</item>
+    </style>
+
+    <style name="TextAppearance.NeHood.Body" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textSize">@dimen/text_body</item>
+        <item name="android:textColor">@color/nh_ink_soft</item>
+    </style>
+
+    <style name="TextAppearance.NeHood.Caption" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textSize">@dimen/text_caption</item>
+        <item name="android:textColor">@color/nh_gray</item>
+    </style>
+
+    <style name="TextAppearance.NeHood.Overline" parent="TextAppearance.NeHood.Caption">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.08</item>
+    </style>
+
+    <style name="TextAppearance.NeHood.Price" parent="TextAppearance.NeHood.Title">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="TextAppearance.NeHood.ToolbarTitle" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:fontFamily">@font/anton</item>
+        <item name="fontFamily">@font/anton</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+
+    <!-- Esquinas redondeadas de las fotos de producto -->
+    <style name="ShapeAppearance.NeHood.Image" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/radius_s</item>
+    </style>
+
+    <!-- ===== Botones ===== -->
+    <style name="Widget.NeHood.Button" parent="Widget.Material3.Button">
+        <item name="android:minHeight">@dimen/button_height</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">15sp</item>
+        <item name="cornerRadius">@dimen/radius_s</item>
+    </style>
+
+    <style name="Widget.NeHood.Button.Outlined" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:minHeight">@dimen/button_height</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/nh_ink</item>
+        <item name="iconTint">@color/nh_ink</item>
+        <item name="cornerRadius">@dimen/radius_s</item>
+        <item name="strokeColor">@color/nh_ink</item>
+        <item name="strokeWidth">2dp</item>
+    </style>
+
+    <style name="Widget.NeHood.Button.Danger" parent="Widget.NeHood.Button.Outlined">
+        <item name="android:textColor">@color/nh_red</item>
+        <item name="iconTint">@color/nh_red</item>
+        <item name="strokeColor">@color/nh_red</item>
+    </style>
+
+    <style name="Widget.NeHood.Button.Text" parent="Widget.Material3.Button.TextButton">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.NeHood.IconButton" parent="Widget.Material3.Button.IconButton">
+        <item name="iconTint">@color/nh_ink</item>
+        <item name="android:minWidth">@dimen/touch_min</item>
+        <item name="android:minHeight">@dimen/touch_min</item>
+    </style>
+
+    <!-- ===== Campos de texto ===== -->
+    <style name="Widget.NeHood.TextInput" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">@color/nh_white</item>
+        <item name="boxStrokeColor">?attr/colorPrimary</item>
+        <item name="hintTextColor">?attr/colorPrimary</item>
+        <item name="boxCornerRadiusTopStart">@dimen/radius_s</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/radius_s</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/radius_s</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/radius_s</item>
+    </style>
+
+    <style name="Widget.NeHood.TextInput.Dropdown" parent="Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="boxBackgroundColor">@color/nh_white</item>
+        <item name="boxStrokeColor">?attr/colorPrimary</item>
+        <item name="hintTextColor">?attr/colorPrimary</item>
+        <item name="boxCornerRadiusTopStart">@dimen/radius_s</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/radius_s</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/radius_s</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/radius_s</item>
+    </style>
+
+    <!-- ===== Tarjetas, chips, navegación ===== -->
+    <style name="Widget.NeHood.Card" parent="Widget.Material3.CardView.Outlined">
+        <item name="cardBackgroundColor">@color/nh_white</item>
+        <item name="cardCornerRadius">@dimen/radius_m</item>
+        <item name="cardElevation">0dp</item>
+        <item name="strokeColor">@color/nh_line</item>
+        <item name="strokeWidth">@dimen/card_stroke</item>
+    </style>
+
+    <style name="Widget.NeHood.Card.Dark" parent="Widget.NeHood.Card">
+        <item name="cardBackgroundColor">@color/nh_ink</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+
+    <style name="Widget.NeHood.Chip" parent="Widget.Material3.Chip.Filter">
+        <item name="chipBackgroundColor">@color/chip_bg</item>
+        <item name="android:textColor">@color/chip_text</item>
+        <item name="chipStrokeColor">@color/nh_ink</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="chipCornerRadius">50dp</item>
+        <item name="checkedIconVisible">false</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.NeHood.BottomNav" parent="Widget.Material3.BottomNavigationView">
+        <item name="android:background">@color/nh_white</item>
+        <item name="itemIconTint">@color/bottom_nav_item</item>
+        <item name="itemTextColor">@color/bottom_nav_item</item>
+        <item name="itemActiveIndicatorStyle">@style/Widget.NeHood.BottomNav.Indicator</item>
+        <item name="labelVisibilityMode">labeled</item>
+    </style>
+
+    <style name="Widget.NeHood.BottomNav.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">?attr/colorPrimaryContainer</item>
+    </style>
+
+    <style name="Widget.NeHood.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="android:background">@color/nh_ink</item>
+        <item name="titleTextColor">@color/nh_white</item>
+        <item name="titleTextAppearance">@style/TextAppearance.NeHood.ToolbarTitle</item>
+        <item name="navigationIconTint">@color/nh_white</item>
+    </style>
+
+    <style name="Widget.NeHood.Fab" parent="Widget.Material3.ExtendedFloatingActionButton.Icon.Primary">
+        <item name="backgroundTint">?attr/colorPrimary</item>
+        <item name="iconTint">@color/nh_white</item>
+        <item name="android:textColor">@color/nh_white</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Etiqueta de estado (Publicado, Agotado, Vendedor...) -->
+    <style name="Widget.NeHood.Badge" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_badge</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Opción de pago tipo tarjeta seleccionable -->
+    <style name="Widget.NeHood.RadioOption" parent="Widget.Material3.CompoundButton.RadioButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/space_s</item>
+        <item name="android:minHeight">@dimen/button_height</item>
+        <item name="android:background">@drawable/bg_option</item>
+        <item name="android:paddingStart">@dimen/space_s</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/nh_ink</item>
+        <item name="buttonTint">?attr/colorPrimary</item>
+    </style>
+
+    <!-- Encabezado de sección -->
+    <style name="Widget.NeHood.SectionTitle" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">@style/TextAppearance.NeHood.Title</item>
+        <item name="android:layout_marginTop">@dimen/space_l</item>
+        <item name="android:layout_marginBottom">@dimen/space_s</item>
+    </style>
+</resources>

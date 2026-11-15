@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Android 12+: el sistema dibuja su propia splash; la configuramos con la marca. -->
+<resources>
+    <style name="Theme.NeHood.Splash" parent="Theme.NeHood.Auth">
+        <item name="android:windowBackground">@drawable/bg_splash</item>
+        <item name="android:windowSplashScreenBackground">@color/nh_cream</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/ic_splash_mark</item>
+    </style>
+</resources>

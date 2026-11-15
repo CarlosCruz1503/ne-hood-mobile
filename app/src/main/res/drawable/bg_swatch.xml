@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Bloque de color que representa la foto de la prenda. Se tiñe desde el código con el color del producto. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="@color/nh_white" />
+    <corners android:radius="@dimen/radius_s" />
+</shape>

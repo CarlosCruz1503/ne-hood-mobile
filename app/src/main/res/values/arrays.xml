@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="collections">
+        <item>Hora Pico</item>
+        <item>Tercer Día</item>
+        <item>Básicos NH</item>
+    </string-array>
+    <string-array name="categories">
+        <item>Camisetas</item>
+        <item>Hoodies</item>
+        <item>Gorras</item>
+        <item>Accesorios</item>
+    </string-array>
+    <string-array name="levels">
+        <item>Cliente</item>
+        <item>Parche</item>
+        <item>Familia</item>
+    </string-array>
+</resources>
