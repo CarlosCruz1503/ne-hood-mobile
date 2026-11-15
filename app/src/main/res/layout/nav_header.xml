@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/nh_ink"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/space_l"
+    android:paddingTop="@dimen/space_xl"
+    android:paddingEnd="@dimen/space_l"
+    android:paddingBottom="@dimen/space_l">
+
+    <TextView
+        android:id="@+id/tv_avatar"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@drawable/bg_avatar"
+        android:gravity="center"
+        android:textColor="@color/nh_white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_m"
+        android:textAppearance="@style/TextAppearance.NeHood.Title"
+        android:textColor="@color/nh_white" />
+
+    <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.NeHood.Caption"
+        android:textColor="@color/nh_gray_light" />
+
+    <TextView
+        android:id="@+id/tv_role"
+        style="@style/Widget.NeHood.Badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_s" />
+</LinearLayout>

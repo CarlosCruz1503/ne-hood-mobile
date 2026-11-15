@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- ePayco necesita internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Huella (RF-06) -->
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <!-- Ubicación para la dirección de entrega (RF-22) -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- Cámara y GPS opcionales: la app también se instala en equipos sin ellos -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+
+    <!-- Para abrir la app de cámara y de mapas desde Android 11 -->
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="geo" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".NeHoodApp"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.NeHood"
+        tools:targetApi="34">
+
+        <!-- Transversal -->
+        <activity
+            android:name=".auth.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NeHood.Splash"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".auth.LoginActivity"
+            android:theme="@style/Theme.NeHood.Auth"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".auth.RegisterActivity"
+            android:theme="@style/Theme.NeHood.Auth"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".auth.ForgotPasswordActivity"
+            android:theme="@style/Theme.NeHood.Auth"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Comprador (naranja) -->
+        <activity
+            android:name=".buyer.BuyerActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.NeHood.Buyer" />
+        <activity
+            android:name=".buyer.ProductDetailActivity"
+            android:theme="@style/Theme.NeHood.Buyer" />
+        <activity
+            android:name=".buyer.CheckoutActivity"
+            android:theme="@style/Theme.NeHood.Buyer"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".payment.PaymentActivity"
+            android:theme="@style/Theme.NeHood.Buyer" />
+
+        <!-- Vendedor (azul) -->
+        <activity
+            android:name=".seller.SellerActivity"
+            android:theme="@style/Theme.NeHood.Seller" />
+        <activity
+            android:name=".seller.ProductFormActivity"
+            android:theme="@style/Theme.NeHood.Seller"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Administrador (morado) -->
+        <activity
+            android:name=".admin.AdminActivity"
+            android:theme="@style/Theme.NeHood.Admin" />
+        <activity
+            android:name=".admin.UserFormActivity"
+            android:theme="@style/Theme.NeHood.Admin"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Comparte con la app de cámara un archivo temporal donde guardar la foto -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+</manifest>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Barra superior reutilizable (se usa con <include>): toolbar negra + línea con el color del rol. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.Material3.Dark.ActionBar" />
+
+    <View
+        android:id="@+id/accent_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/accent_bar"
+        android:background="?attr/colorPrimary" />
+</LinearLayout>
